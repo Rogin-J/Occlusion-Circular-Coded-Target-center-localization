@@ -2,8 +2,7 @@ clear;clc;
 load Y_Simulation.mat
 load camera_norm_cir_band_vid.mat
 % load camera_norm_cir_vid.mat
-param=[8.6289 9.0080 8.6705]; %8.6289---cct1,9.0080---cct2,8.6705---cct3
-
+param=[8.6289 9.0080 8.6705]; %放缩系数
 for i=1:3
 Y_Simulation = -Y(50,:)*param(i); 
 Y_Simulation = Y_Simulation';
