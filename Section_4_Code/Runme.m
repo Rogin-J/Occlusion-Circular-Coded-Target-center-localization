@@ -1,0 +1,2 @@
+run optimal_vid_cir_band_update_541.m
+run plot_curve_for_maintext.m
