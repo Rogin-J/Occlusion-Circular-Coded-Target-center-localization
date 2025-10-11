@@ -22,9 +22,9 @@ for ii=1:size(contours,1)
         popmax=max(max(center_pts));     %￥即自变量的取值范围
         popmin=min(min(center_pts));
         % 使用匿名函数适配粒子群等优化器
-%         obj_fun = @(xy) radius_density_peak_multi(xy, contour_data,threshold,3); %论文中使用
+%         obj_fun = @(xy) radius_density_peak_multi(xy, contour_data,threshold,3); %
         % 粒子群搜索
-        obj_fun = @(xy) radius_density_peak_fusion(xy, [], center_pts, band_pts, threshold, top_k); %radius_density_peak_fusion_ava效果更好
+        obj_fun = @(xy) radius_density_peak_fusion(xy, [], center_pts, band_pts, threshold, top_k); %
 
         options = optimoptions('particleswarm', 'Display', 'off'); % 关闭所有迭代信息
         [coordinat_best(i,:), best_val] = particleswarm(obj_fun, 2, [popmin, popmin], [popmax, popmax],options);
